@@ -42,7 +42,9 @@ echo
 echo -e "$CYAN => Installing Package to compile crypto currency $COL_RESET"
 sleep 3
 
-if [ "`lsb_release -d | sed 's/.*:\s*//' | sed 's/22\.04\.[0-9]/22.04/' `" == "Ubuntu 22.04 LTS" ]; then
+os_version="`lsb_release -d | sed 's/.*:\s*//' | sed 's/24\.04\.[0-9]/24.04/' | sed 's/22\.04\.[0-9]/22.04/'`"
+
+if [ "$os_version" == "Ubuntu 22.04 LTS" ] || [ "$os_version" == "Ubuntu 24.04 LTS" ]; then
 apt_install software-properties-common build-essential
 apt_install libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils git cmake libboost-all-dev zlib1g-dev libz-dev libseccomp-dev libcap-dev libminiupnpc-dev gettext
 apt_install libminiupnpc17 libzmq5
