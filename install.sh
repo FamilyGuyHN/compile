@@ -63,7 +63,7 @@ hide_output sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-11 
 hide_output sudo update-alternatives --set gcc /usr/bin/gcc-10
 hide_output sudo update-alternatives --set g++ /usr/bin/g++-10 
 else
-        echo -e "$RED Aborting, wrong O/S. Must be Ubuntu 22.04 or Ubuntu24.04"
+        echo -e "$RED Aborting, wrong O/S. Must be Ubuntu 22.04 or Ubuntu 24.04"
         exit 1
 fi
 echo -e "$GREEN Done...$COL_RESET"
