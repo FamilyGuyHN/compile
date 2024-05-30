@@ -25,7 +25,7 @@ figlet -f slant -w 100 "Saltpool Crypto Compiler" | lolcat -f
 echo
 echo -e "$GREEN************************************************************************$COL_RESET"
 echo -e "$GREEN Crypto Compiler Install Script $script_version $COL_RESET"
-echo -e "$GREEN Operating System: Ubuntu 22.04 $COL_RESET"
+echo -e "$GREEN Operating System: Ubuntu 22.04/24.04 $COL_RESET"
 echo -e "$GREEN************************************************************************$COL_RESET"
 echo
 sleep 3
@@ -63,7 +63,7 @@ hide_output sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-11 
 hide_output sudo update-alternatives --set gcc /usr/bin/gcc-10
 hide_output sudo update-alternatives --set g++ /usr/bin/g++-10 
 else
-        echo -e "$RED Aborting, wrong O/S. Must be Ubuntu 22.04."
+        echo -e "$RED Aborting, wrong O/S. Must be Ubuntu 22.04 or Ubuntu24.04"
         exit 1
 fi
 echo -e "$GREEN Done...$COL_RESET"
